@@ -44,5 +44,20 @@ Que es una promesa?
 
     - Es un programa que tomará una acción para obtener información
 
+![Foto de algo](https://imgv2-2-f.scribdassets.com/img/document/234715992/original/23207569b1/1714654136?v=1)
+
+[Entrada a](https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyK1MKy5TYDRgdGDw4khLTE5Nys_PBgBmYAfL&q=facebook&rlz=1C5CHFA_enES1116ES1116&oq=fac&gs_lcrp=EgZjaHJvbWUqEwgBEC4YgwEYxwEYsQMY0QMYgAQyBggAEEUYOTITCAEQLhiDARjHARixAxjRAxiABDINCAIQABiDARixAxiABDITCAMQLhiDARjHARixAxjRAxiABDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPDIGCAcQBRhA0gEIMjAzMGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8)
 
 
+Lista: 
+
+- Soy millonario
+- Soy millonario
+- Soy millonario
+
+La *funcion flecha* se escribe asi () => {}
+
+```
+
+js
+// Soy un comentario
