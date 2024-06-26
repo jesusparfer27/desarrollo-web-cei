@@ -16,7 +16,7 @@ export const AidinHobbies = () => {
                     <strong className="description_tittle">Sobre Aidin</strong>
                     <p className="description_text">
                         Aidin viene de Venezuela,
-                        vivió durante 8 años en xBuenos Aires (Argentina) y
+                        vivió durante ocho años en Buenos Aires (Argentina) y
                         actualmente se encuentra en Valencia estudiando un
                         master de programación y diseño web.
                         Compagina el día a día con los estudios y su trabajo
