@@ -7,6 +7,11 @@ html {
     display: flex;
 }
 
+.aidin_presentacion {
+    display: flex;
+    justify-content: center;
+}
+
 .bloque_introduccion{
     background-color: rgb(34, 139, 34, 0.4);
     border: 2px solid green;

@@ -1,0 +1,25 @@
+.description_container {
+    width: 500px;
+}
+
+.aidin_name {
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+    font-size: 3rem;
+}
+
+.information_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.information_container svg{
+    height: 50px;
+    width: 50px;
+}

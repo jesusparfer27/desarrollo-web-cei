@@ -1,0 +1,10 @@
+.text_container_image {
+    background-image: url('https://media.licdn.com/dms/image/D4E03AQGpc3bALlJ5yw/profile-displayphoto-shrink_200_200/0/1699108259919?e=1724889600&v=beta&t=ix0-Ru9iPD-MlPScRw46S00DWOvS68whYxlIn6LVJJ0');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+}
+
