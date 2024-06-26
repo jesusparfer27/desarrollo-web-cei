@@ -6,7 +6,7 @@ export const AidinHobbies = () => {
     const [hiddenText, setHiddenText] = useState(false);
 
     const handleClick = () => {
-        setHiddenText(!hiddenText); // Alternar el estado de hiddenText
+        setHiddenText(!hiddenText);
     };
 
     return (
@@ -16,7 +16,7 @@ export const AidinHobbies = () => {
                     <strong className="description_tittle">Sobre Aidin</strong>
                     <p className="description_text">
                         Aidin viene de Venezuela,
-                        vivió durante 8 años en Buenos Aires (Argentina) y
+                        vivió durante 8 años en xBuenos Aires (Argentina) y
                         actualmente se encuentra en Valencia estudiando un
                         master de programación y diseño web.
                         Compagina el día a día con los estudios y su trabajo
@@ -25,7 +25,7 @@ export const AidinHobbies = () => {
                 </div>
                 <div className={hiddenText ? "hidden_text visible" : "hidden_text"}>
                     <strong className="hidden_text_strong">Más intereses sobre Aidin</strong>
-                    <p className="hidden_text_p">Aidin le gusta la naturaleza</p>
+                    <p className="hidden_text_p">A Aidin le gusta todo lo relacionado con la naturaleza, sobre todo excursiones, acampadas y actividades al aire libre.</p>
                 </div>
                 <div className={hiddenText ? "hobbies_container hidden" : "hobbies_container visible"}>
                     <h2 className="hobbies_tittle">Hobbies de Aidin</h2>
@@ -35,7 +35,7 @@ export const AidinHobbies = () => {
                         <li>Leer</li>
                         <li>Naturaleza</li>
                         <li>Entrenar</li>
-                        <li>Otro más</li>
+                        <li>Cantar</li>
                     </ul>
                 </div>
                 <div className="button_container">

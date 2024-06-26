@@ -17,10 +17,6 @@
     flex-direction: column;
 }
 
-.hobbies_tittle {
-    
-}
-
 .hobbies_list {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -59,17 +55,19 @@
 
 .hidden_text.visible{
     margin-top: 40px;
-    margin-bottom: 140px;
+    margin-bottom: 91px;
 }
+
+/* Estilos para magic button */
 
 .hobbies_container.hidden {
     display: none;
 }
 
 .visible {
-    display: block; /* o display: flex; o display: grid; dependiendo del contenedor */
+    display: block;
 }
 
 .hobbies_container {
-    display: block; /* o flex, grid, etc., según corresponda */
+    display: block;
 }

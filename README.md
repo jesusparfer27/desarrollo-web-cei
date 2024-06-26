@@ -14,7 +14,7 @@ NPM = Instalador de paquetes
 
 Que es un useState?
 
-    - Es una forma sencilla de crear y actualizar variables de estado en un componente.
+    - Sirve para crear y actualizar el estado de las variables de un componente.
 
 Que es un useContext?
 
