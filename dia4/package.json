@@ -1,0 +1,12 @@
+{
+  "name": "dia4",
+  "version": "1.0.0",
+  "description": "```js const listaColores = [\"rojo\", \"azul\", \"verde\"];",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "script.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

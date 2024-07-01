@@ -95,6 +95,7 @@ Podemos crear nuestros propios scripts, como por ej: `start, dev, test, etc`
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "build": "crear una version final para subir al servidor",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   ...
