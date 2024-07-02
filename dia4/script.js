@@ -1,4 +1,6 @@
-export const ArtGallery = [ 
+console.clear()
+
+const ArtGallery = [ 
  { id: 1, artist: "Monet", title: "Water Lilies", year: 1916, isExhibited: true },
  { id: 2, artist: "Van Gogh", title: "Starry Night", year: 1889, isExhibited: true }, 
  { id: 3, artist: "Da Vinci", title: "Mona Lisa", year: 1503, isExhibited: false }, 
@@ -14,23 +16,34 @@ export const ArtGallery = [
 //Usa forEach y Template Strings para mostrar los títulos de las obras por consola en el formato:
 //"La obra TITULO DE OBRA por el autor AUTOR DE LA OBRA (AÑO) NO SE/SE encuentra exhibida"
 
-ArtGallery.forEach(obra => {
-    if (obra.isExhibited === true) {
-        console.log("Se")
-    } else {
-        console.log("No se")
-    }
+// ArtGallery.forEach(obra => {
+//     if (obra.isExhibited === true) {
+//         console.log("se")
+//     } else {
+//         console.log("no se")
+//     }
 
 
-    console.log(`La obra ${obra.title} por el autor ${obra.artist} (${obra.year}) ${obra.isExhibited} encuentra exhibida.`)
-})
+//     console.log(`La obra ${obra.title} por el autor ${obra.artist} (${obra.year}) ${obra.isExhibited} encuentra exhibida.`)
+// })
 
 
 //Usa map para crear un nuevo array que contenga solo los títulos de las obras y muéstralo en consola.
 
-
+ArtGallery.map(obra => {
+    console.log(obra.title)
+})
 
 //Usar filter para crear un array de obras que están actualmente en exhibición y mostrarlas por consola.
+
+ArtGallery.filter(obra => {
+    if (obra.isExhibited === true) {
+        console.log(`La obra se encuentra ${obra.title}actualmente en exhibición`)
+    } else {
+        (!obra.isExhibited)
+        console.log(`La obra ${obra.title} no se encuentra disponible`)
+    }
+})
 
 //Crear una función de búsqueda que reciba como parámetro un título de obra, y que utilice find para buscar esa obra específica
 
