@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-     <Card></Card>
+     <Card nombre ="Jesús" edad="24" hobbies={["gimnasio","programar", "kickboxing"]}/>
     </>
   )
 }

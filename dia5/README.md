@@ -8,6 +8,9 @@ const alumno = {
 }
 imprimir(alumno)
 
+// Deconstrucción de listas
+const lista = ["item1", "item2", "item3"]
+
 function imprimir(props) {
         // Forma tradicional / vieja
         // const edad = props.edad
@@ -19,14 +22,14 @@ function imprimir(props) {
     //  incluyendo renombrar la variable "nombre" por "miNombre" ya que la estaba usando de antes
 const {edad, nombre:miNombre, asignatura} = props
 
-console.log(`Mi nombre es ${nombre}, tengo ${edad} años, y estoy en la maderia de ${asignatura}
+console.log(`Mi nombre es ${miNombre}, tengo ${edad} años, y estoy en la maderia de ${asignatura}
 `);
 }
 ```
 
 # CommonJS y ECMAScript Modules (ESM)
 
-En JS, los módulos son porciones de código reutilizables que se pueden importat y exportat entre diferentes archivos. Estos permiten organizar y reutilizar el código de manera eficiente. 
+En JS, los módulos son porciones de código reutilizables que se pueden importar y exportar entre diferentes archivos. Estos permiten organizar y reutilizar el código de manera eficiente. 
 
 ## CommonJS     
 
@@ -80,7 +83,8 @@ export default mensaje1; // export default, no usa llaves en el import
 
 // archivo2.js
 import mensaje1 from "./archivo1" // import default va sin llaves
-import miMensaje from "./archivo1" // import mensaje1 renombrado a miMensaje
+import miMensaje from "./archivo1" // import mensaje1 renombrado a miMensaje porque es default
+
 import {mensaje2, mensaje3} from "./archivo1"
 
 console.log(mensaje1, miMensaje, mensaje2, mensaje3);
@@ -106,13 +110,30 @@ en el backend modificamos nuestro archivo package.json usando la propiedad
     "test": "echo \"Error: no test specified\" && exit 1"
     },
   }
+
   ```
 
   En el frontEnd tenemos que cambiar nuestras etiquetas de script
+
   ```html
+
   <script type="module" src="./js/mi-script.js">
+
     ```
 
     # React 
 
     React es una biblioteca de JS para construir interfaces de usuarios (facebook 2013)
+
+    Instrucciones para crear un proyecto:
+
+    ```bash
+
+    npm create vite@latest
+    # Elegimos nombre de carpeta y otras opciones
+    # Elegimos libreria "react"
+    cd nombre-proyecto
+    npm i
+    npm run dev
+
+    ```

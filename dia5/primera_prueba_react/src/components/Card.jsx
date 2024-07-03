@@ -1,5 +1,5 @@
-const Card = ({nombre, edad, hobby}) => {
-
+const Card = ({props}) => {
+    const {nombre, edad, hobbies} = props;
     //const nombre = "Jesús"
     //const edad = 24
     //const hobby = ["gimnasio", "programar", "kickboxing"]
@@ -11,14 +11,13 @@ const Card = ({nombre, edad, hobby}) => {
     <h4>{nombre}</h4>
     <p>{edad}</p>
     <ul>
-        <li>{hobby.map( (hobby) => {
+        {hobbies.map( (hobby) => {
             return (
                 <li>{hobby}</li>
             )
         }
-        )}</li>
+        )}
     </ul>
-
     </>
 )}
 
