@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
+
+
+
+.bloque_tarjeta {
+    display: flex;
+    width: 83%;
+    height: 20rem;
+    justify-content: center;
+    border: 5px solid #555;
+    border-radius: 2rem;
+    margin: 2rem;
+    box-shadow: 2px 2px 12px rgb(0, 0, 0, 0.3);
+}
+
+.texto_ocupacion{
+   
+}
+    
