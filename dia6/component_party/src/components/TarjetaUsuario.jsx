@@ -1,5 +1,4 @@
-import '../components/estilos/tarjeta_usuario.css'
-import ListaTareas from '../../tareas/ListaTareas'
+import '../components/css/tarjeta_usuario.css'
 
 const TarjetaUsuario = ({nombre, edad, ocupacion}) => {
 

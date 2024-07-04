@@ -1,13 +1,17 @@
 const Tarea = ({tarea, isCompletada}) => {
+
     return (
         <div>
-         <h1>Soy Tarea</h1>
          {tarea} <br />
-         <button>Eliminar tarea</button>
          <button>Completar tarea</button>
+         {
+            isCompletada && (
+                <button>Eliminar tarea</button>
+            )
+         }
         </div>
     )
 }
 
-export default Tarea
 
+export default Tarea
