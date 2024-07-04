@@ -1,6 +1,8 @@
-import '../components/css/tarjeta_usuario.css'
-
 const TarjetaUsuario = ({nombre, edad, ocupacion}) => {
+
+        // const nombre = "Jesus"
+        // const edad = 24
+        // const ocupación = "full stack developer"
 
     return (
         <>

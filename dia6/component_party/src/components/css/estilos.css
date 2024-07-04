@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
 
-
+.tarjetas_usuario {
+    display: flex;
+    justify-content: center;
+}
 
 .bloque_tarjeta {
     display: flex;

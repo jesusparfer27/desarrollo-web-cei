@@ -1,26 +1,15 @@
-const PerfilUsuario = ({props, props1}) => {
+const PerfilUsuario = ({usuario}) => {
 
-    const userData = {
-            nombre: 'El Barto',
-            email: 'elbarto@fox.com',
-            img: "https://i.ebayimg.com/images/g/Z9oAAOSwH7NlKK4J/s-l1200.webp&quot;",
-                direccion: {
-                calle: 'Calle Falsa 123',
-                ciudad: 'Springfield',
-                codigoPostal: '12345'
-                }
-    }
-
-    const {nombre, email, img} = props;
-    const {calle, ciudad, codigoPostal} = props1
-
+    const {nombre, email, direccion, img} = usuario
+    const {calle, ciudad, codigoPostal} = direccion
 
     return (
-        <>
-        
-
-
-        </>
+        <div className="bloque_el_barto">
+            <h2>{nombre}</h2>
+            <img src={img} alt={nombre}/>
+            <p><b>Email:</b> {email}</p>
+            <p><b>Dirección</b>{calle}, {ciudad}, {codigoPostal}</p>
+        </div>
     )
 }
 
