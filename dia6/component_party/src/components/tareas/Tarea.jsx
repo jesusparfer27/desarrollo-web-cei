@@ -1,17 +1,17 @@
 const Tarea = ({ tarea, isCompletada }) => {
 
     return (
-        <div className="task_container">
-            <div className="task_text">
+        <div className="divStyleCard">
+                <div className="divStyleCardName">
                 {tarea} <br />
-                <button>Completar tarea</button>
+                <button className="buttonStyle">Tarea completada</button>
                 {
                     isCompletada && (
-                        <button>Eliminar tarea</button>
+                        <button className="buttonStyle">Eliminar tarea</button>
                     )
                 }
+                </div>
             </div>
-        </div>
     )
 }
 

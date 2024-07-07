@@ -5,7 +5,8 @@ const ListaTareas = ({tareas}) => {
     console.log(tareas);
     
     return (
-        <div className="bloque_tarjeta">
+        <div className="divStyleCard">
+            <div className="divStyleCardList">
                 {
                     tareas.map(item => {
                         const {id, tarea, isCompletada} = item;
@@ -14,6 +15,8 @@ const ListaTareas = ({tareas}) => {
                         )
                     })
                 }
+                </div>
+                <button className="buttonStyle AddTask">Agregar una nueva tarea</button>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import styles from './galeria.module.css'
 const GaleriaImagenes = ({lista}) => {
     console.log("lista es:", lista);
     return (
-        <div className="Card">
+        <div className="divStyleCard">
             {
                 lista.map( (item, index)=> (
                     <Imagen key={index} src={item.src} alt={item.alt} />

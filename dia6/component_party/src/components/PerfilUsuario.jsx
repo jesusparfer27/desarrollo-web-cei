@@ -4,9 +4,9 @@ const PerfilUsuario = ({usuario}) => {
     const {calle, ciudad, codigoPostal} = direccion
 
     return (
-        <div className="bloque_el_barto">
-            <h2>{nombre}</h2>
-            <img src={img} alt={nombre}/>
+        <div className="divStyleCard">
+            <h2 className="h2Style">{nombre}</h2>
+            <img className="imgStyle" src={img} alt={nombre}/>
             <p><b>Email:</b> {email}</p>
             <p><b>Dirección</b>{calle}, {ciudad}, {codigoPostal}</p>
         </div>

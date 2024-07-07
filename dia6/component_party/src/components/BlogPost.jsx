@@ -17,8 +17,8 @@ const BlogPost = ({titulo, autor, fecha, children}) => {
         });
 
     return (
-        <article className="container_blog_spot">
-            <h2>{titulo}</h2>
+        <article className="divStyleCard">
+            <h2 className="h2Style">{titulo}</h2>
             {/* Contenido de nuestra etiqueta */}
             {children}
 
