@@ -17,7 +17,7 @@ const Comentarios = ({ comentProps }) => {
                     date={item.date}
                     content={item.content}
                     >
-                    {item.replies && item.replies.length > 0 && (
+                    {
                         <div className="divStyle">
                             {item.replies.map((reply) => (
                                 <Comentario
@@ -28,7 +28,7 @@ const Comentarios = ({ comentProps }) => {
                                 />
                             ))}
                         </div>
-                    )}
+                    }
                     </Comentario>
                 ))}
         </div>
