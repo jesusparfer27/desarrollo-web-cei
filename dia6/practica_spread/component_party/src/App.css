@@ -1,0 +1,108 @@
+:root {
+    --text-color: color: white; /* Color del texto principal */
+    --text-shadow:
+        1px 1px 0px white, /* Sombra abajo a la derecha */
+        -1px -1px 0px white, /* Sombra arriba a la izquierda */
+        -1px 1px 0px white, /* Sombra abajo a la izquierda */
+        1px -1px 0px white; /* Sombra arriba a la derecha */
+        color: #FF7F50;
+}
+
+/* TEXT STYLES */
+
+.h1Style {
+    display: flex;
+    justify-content: center;
+}
+
+.h2Style {
+    color: var(--text-color);
+    text-shadow: var(--text-shadow);
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.strongStyle {
+    margin-bottom: 10%;
+}
+
+/* SEMANTYC STYLES */
+
+.divStyleCardName{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.divStyleCard {
+    border: 2px solid #FF7F50;
+    padding: 5%; 
+    margin: 5%;
+}
+
+.divStyleCardColumn {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    padding: 5%; 
+}
+
+.divStyleCardList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto auto auto;
+    width: 100%;
+}
+
+.divStyleCardName {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* BUTTON STYLE */
+
+.buttonStyle {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    padding: .5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonStyle:hover {
+    
+}
+
+.buttonStyle.AddTask {
+    margin-top: 3%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 50%;
+}
+
+/* IMG STYLE */
+
+.imgStyle {
+    width: 100%;
+    height: auto;
+}
+
+/* 
+@media ( max-width: 700px ) {
+
+     {
+        display: flex;
+        flex-direction: column;
+    }
+
+} */
+
