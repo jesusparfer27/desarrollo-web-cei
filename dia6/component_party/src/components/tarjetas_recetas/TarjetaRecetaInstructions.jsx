@@ -1,6 +1,6 @@
 const TarjetaRecetaInstructions = ({instructions, children}) => {
     return (
-        <div className="divStyle">
+        <div className="divStyleCard">
             <h2 className="h2Style">Instructions</h2>
             <ul>
             {instructions.map((instructions, index) => (

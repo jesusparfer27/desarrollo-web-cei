@@ -1,7 +1,7 @@
 const TarjetaRecetaIngredients = ({ingredients, children}) => {
     
     return (
-               <div className="divStyle">
+               <div className="divStyleCard">
                 <h2 className="h2Style">Ingredients</h2>
                     
                     <ul>

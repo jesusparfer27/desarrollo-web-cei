@@ -325,19 +325,16 @@ function App() {
 
 
       {/* CARTA DE RESTAURANTE */}
-
       <div>
         <RestaurantMenu restaurant={restaurantData} />
       </div>
 
       {/* PRODUCTOS */}
-
       <div>
         <Productos productsProps={productsData} />
       </div>
 
       {/* TESTIMONIOS */}
-
       <div>
         <Testimonios testimoniosProps={testimoniosData}/>
       </div>
