@@ -1,29 +1,14 @@
-const TarjetaUsuario = () => {
-
-    const data = [
-        {
-            id: 1,
-            nombre: "Jesús",
-            edad: 24,
-            ocupacion: "Desarrollador web"
-        }, {
-            id: 2,
-            nombre: "Timmmy",
-            edad: 22,
-            ocupacion: "Dentista"
-        }, {
-            id: 3,
-            nombre: "Dimitry",
-            edad: 26,
-            ocupacion: "Panadero"
-        }
-    ]
+const TarjetaUsuario = ({ nombre, edad, ocupacion }) => {
 
     return (
         <>
-            <div className="divStyleCard"
-                {...data}
-            >
+            <div className="divStyleCard">
+
+                <ul>
+                    <li>nombre: {nombre}</li>
+                    <li>edad: {edad}</li>
+                    <li>ocupacion: {ocupacion}</li>
+                </ul>
             </div>
         </>
     )

@@ -270,18 +270,35 @@ function App() {
     }
   ];
 
+  const data = [
+    {
+      id: 1,
+      nombre: "Jesús",
+      edad: 24,
+      ocupacion: "Desarrollador web"
+    }, {
+      id: 2,
+      nombre: "Timmmy",
+      edad: 22,
+      ocupacion: "Dentista"
+    }, {
+      id: 3,
+      nombre: "Dimitry",
+      edad: 26,
+      ocupacion: "Panadero"
+    }
+  ]
+
   return (
     <>
       <h1 className='h1Style'>Trabajo sobre tarjetas de usuario</h1>
       <div className='divStyleCard'>
-        <TarjetaUsuario nombre="Jesús" edad="24" ocupacion={["instructor fitness"]} />
-        <TarjetaUsuario nombre="Timmy" edad="22" ocupacion={["Dentista"]} />
-        <TarjetaUsuario nombre="Jesús" edad="24" ocupacion={["instructor fitness"]} />
-        <TarjetaUsuario nombre="Timmy" edad="22" ocupacion={["Dentista"]} />
-        {/* <ul>
-      <li><b>{nombre}</b></li>
-      <li><b>{edad}</b></li>
-    </ul> */}
+
+        {data.map((usuario) => (
+          <TarjetaUsuario key={usuario.id} {...usuario} />
+        ))}
+
+
       </div>
 
       <br />
@@ -336,22 +353,22 @@ function App() {
 
       {/* TESTIMONIOS */}
       <div>
-        <Testimonios testimoniosProps={testimoniosData}/>
+        <Testimonios testimoniosProps={testimoniosData} />
       </div>
 
       {/* COMENTARIOS */}
       <div>
-        <Comentarios comentProps={comentariosData}/>
+        <Comentarios comentProps={comentariosData} />
       </div>
 
       {/* EVENTOS CALENDARIO  */}
       <div>
-        <EventosCalendario eventsProps={eventosCalendarioData}/>
+        <EventosCalendario eventsProps={eventosCalendarioData} />
       </div>
 
       {/* TARJETAS RECETAS */}
       <div>
-      <TarjetasRecetas tarjetasRecetasProp={tarjetasRecetasData} />
+        <TarjetasRecetas tarjetasRecetasProp={tarjetasRecetasData} />
       </div>
     </>
   )
