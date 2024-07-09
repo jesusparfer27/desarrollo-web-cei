@@ -2,6 +2,13 @@ import Tarea from "../tareas/Tarea";
 
 const ListaTareas = ({tareas}) => {
 
+// const [newTask, setnewTask] = useState(false)
+
+//     const newTask = () => {
+//         if (newTask = "")
+
+//     }
+
     console.log(tareas);
     
     return (
