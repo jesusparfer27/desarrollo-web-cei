@@ -3,8 +3,10 @@ import Contador from './components/Contador'
 import Interruptor from './components/Interruptor'
 import './App.css'
 import ListaDeTareasBasica from './components/listadetareasbasica/ListaDeTareasBasica'
+import { NewFormulario } from './components/NewFormulario'
 // import FormularioRegistro from './components/FormularioRegistro'
 import GaleriaImagenes from './components/galleryimages/GaleriaImagenes'
+import Timer from './components/Timer'
 
 
 function App() {
@@ -38,9 +40,21 @@ function App() {
       </div>
       <br /> */}
 
+      <h1>New Formulario</h1>
+      <div>
+      < NewFormulario />
+      </div>
+      <br />
+
       <h1>Galería Imagenes</h1>
       <div>
          <GaleriaImagenes />
+      </div>
+      <br />
+
+      <h1>Timer</h1>
+      <div>
+         <Timer />
       </div>
       <br />
     </>

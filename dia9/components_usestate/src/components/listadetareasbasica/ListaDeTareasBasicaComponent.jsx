@@ -10,8 +10,11 @@ const ListaDeTareasBasicaComponent = () => {
     const handleAgregarTarea = () => {
 
         if (nuevaTarea.trim() == "" ) {return; }
+        if (nuevaTarea.trim().length < 3) { return;}
+
+
         // Agregar la tarea de listaDeTareas
-        setListaTareas([...listaTareas, nuevaTarea] )
+        setListaTareas([...listaTareas, nuevaTarea])
 
         // limpiar el input
         setNuevaTarea("");

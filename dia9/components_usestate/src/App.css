@@ -54,6 +54,36 @@
 }
 }
 
+/* MIS ESTILOS */
+
+.divStyleImage {
+  display: flex;
+}
+
+.buttonsTimer {
+  display: flex;
+  justify-content: center;
+}
+
+.imgStyle {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  padding: 5%;
+}
+
+button {
+  margin: 3%
+}
+
+input {
+  margin: 5%;
+}
+
+/*         */
+
 html {
   scrollbar-color: rgb(170, 170, 170) #fff;
   scrollbar-color: var(--scrollbar-thumb) var(--background-body);
@@ -252,27 +282,6 @@ textarea {
     box-shadow var(--animation-duration) linear,
     transform var(--animation-duration) ease;
   }
-}
-
-.divStyleImage {
-  display: flex;
-}
-
-.imgStyle {
-  display: flex;
-  justify-content: center;
-}
-
-div {
-  padding: 5%;
-}
-
-button {
-  margin: 3%
-}
-
-input {
-  margin: 5%;
 }
 
 h1 {
