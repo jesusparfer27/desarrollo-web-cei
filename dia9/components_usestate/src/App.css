@@ -254,6 +254,27 @@ textarea {
   }
 }
 
+.divStyleImage {
+  display: flex;
+}
+
+.imgStyle {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  padding: 5%;
+}
+
+button {
+  margin: 3%
+}
+
+input {
+  margin: 5%;
+}
+
 h1 {
   font-size: 2.2em;
   margin-top: 0;

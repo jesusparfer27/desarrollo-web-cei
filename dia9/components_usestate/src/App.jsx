@@ -3,9 +3,12 @@ import Contador from './components/Contador'
 import Interruptor from './components/Interruptor'
 import './App.css'
 import ListaDeTareasBasica from './components/listadetareasbasica/ListaDeTareasBasica'
+// import FormularioRegistro from './components/FormularioRegistro'
+import GaleriaImagenes from './components/galleryimages/GaleriaImagenes'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
@@ -28,6 +31,18 @@ function App() {
       </div>
       <br />
 
+
+      {/* <h1>Ejercicio Formulario</h1>
+      <div>
+        <FormularioRegistro />
+      </div>
+      <br /> */}
+
+      <h1>Galería Imagenes</h1>
+      <div>
+         <GaleriaImagenes />
+      </div>
+      <br />
     </>
   )
 }

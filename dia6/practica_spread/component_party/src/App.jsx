@@ -293,16 +293,15 @@ function App() {
     <>
       <h1 className='h1Style'>Trabajo sobre tarjetas de usuario</h1>
       <div className='divStyleCard'>
-
         {data.map((usuario) => (
           <TarjetaUsuario key={usuario.id} {...usuario} />
         ))}
-
-
       </div>
 
+
       <br />
       <br />
+
       <h1 className='h1Style'>Tareas para este verano</h1>
       <ListaTareas
         tareas={tareas} />
