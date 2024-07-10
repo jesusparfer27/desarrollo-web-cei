@@ -7,7 +7,7 @@ const Interruptor = () => {
     const buttonChange = document.querySelector("html");
 
     buttonChange.addEventListener("click", function () {
-        document.body.style.backgroundColor = isEncendido ? "white" : "gray";
+        document.body.style.backgroundColor = isEncendido ? "gray" : "blue";
     });
 
     /**

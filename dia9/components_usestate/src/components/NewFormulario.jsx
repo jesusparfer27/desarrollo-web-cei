@@ -19,21 +19,21 @@ export const NewFormulario = () => {
     ]
 
     const listaOcupaciones = [
-        {
-            value: "estudiante", label: "Estudiante",
-            value: "empleado", label: "Empleado",
-            value: "autonomo", label: "Autónomo",
-            value: "desempleado", label: "Desempleado",
-            value: "jubilado", label: "Jubilado",
-        }
+        
+            {value: "estudiante", label: "Estudiante"},
+            {value: "empleado", label: "Empleado"},
+            {value: "autonomo", label: "Autónomo"},
+            {value: "desempleado", label: "Desempleado"},
+            {value: "jubilado", label: "Jubilado"},
+        
     ]
 
     const validateForm = () => {
         const objetoErrores = {};
         // hacer nuestras comprobaciones
         if (!formData.nombre) objetoErrores.nombre="Debes ingresar un nombre";
-        if (!formData.apellido) objetoErrores.nombre="Debes ingresar un apellido";
-        if (!formData.rangoEdad) objetoErrores.nombre="Debes ingresar un rango de edad";
+        if (!formData.apellido) objetoErrores.apellido="Debes ingresar un apellido";
+        if (!formData.rangoEdad) objetoErrores.rangoEdad="Debes ingresar un rango de edad";
 
         if (isAdulto && !formData.ocupacion) objetoErrores.ocupacion="Debes seleccionar una ocupación";
 
@@ -108,7 +108,7 @@ export const NewFormulario = () => {
                     <select
                         name="rangoEdad"
                         id="rangoEdad"
-                        value={formData.rangoEda}
+                        value={formData.rangoEdad}
                         onChange={handleChange}
                     >
                         <option value="">Seleccione un rango</option>
@@ -145,7 +145,7 @@ export const NewFormulario = () => {
                         <select
                             name="ocupacion"
                             id="ocupacion"
-                            value={formData.listaOcupaciones}
+                            value={formData.ocupacion}
                             onChange={handleChange}
                         >
                             <option value="">Seleccione una ocupacion</option>
@@ -170,7 +170,7 @@ export const NewFormulario = () => {
                             value={formData.ocupacion}
                             onChange={handleChange}
                         />
-                        {errores.edad &&
+                        {errores.ocupacion &&
                             <p style={{ color: 'red' }}>{errores.ocupacion}</p>
                         }
                     </div>

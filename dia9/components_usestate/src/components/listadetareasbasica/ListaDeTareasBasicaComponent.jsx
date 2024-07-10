@@ -2,16 +2,21 @@ import { useState } from "react"
 
 const ListaDeTareasBasicaComponent = () => {
 
-    const datos = ["Tarea 1", "Tarea 2", "Tarea 3"];
 
     const [listaTareas, setListaTareas] = useState([]);
     const [nuevaTarea, setNuevaTarea] = useState("")
 
-    const handleAgregarTarea = () => {
+    const datos = ["Tarea 1", "Tarea 2", "Tarea 3"];
+
+
+    
+    const handleAgregarTarea = (e) => {
+
+        console.log("evento click", e)
 
         if (nuevaTarea.trim() == "" ) {return; }
-        if (nuevaTarea.trim().length < 3) { return;}
-
+        if (nuevaTarea.trim().length < 3) { return; }
+        
 
         // Agregar la tarea de listaDeTareas
         setListaTareas([...listaTareas, nuevaTarea])
@@ -38,18 +43,11 @@ const ListaDeTareasBasicaComponent = () => {
                 </button>
                 <ul>
                     {
-                        listaTareas.map((tarea, index) => {
-                            console.log(tarea)
-                            return (
-                                <>
-                                    <li key={index}> {tarea} </li>
-                                </>
-                            )
-                        })
+                        listaTareas.map((tarea, i) => ( <li key={i}> {tarea} </li>))
                     }
-                    <li>Tarea 1</li>
+                    {/* <li>Tarea 1</li>
                     <li>Tarea 2</li>
-                    <li>Tarea 3</li>
+                    <li>Tarea 3</li> */}
                 </ul>
                 </div>
     )
