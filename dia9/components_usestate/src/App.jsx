@@ -7,6 +7,8 @@ import { NewFormulario } from './components/NewFormulario'
 // import FormularioRegistro from './components/FormularioRegistro'
 import GaleriaImagenes from './components/galleryimages/GaleriaImagenes'
 import Timer from './components/Timer'
+import FormularioExercise from './formularioexercise/FormularioExercise'
+import FormularioMultiple from './components/FormularioMultiple'
 
 
 function App() {
@@ -46,6 +48,12 @@ function App() {
       </div>
       <br />
 
+      <h1>Formulario Ejercicios</h1>
+      <div>
+         <FormularioExercise/>
+      </div>
+      <br />
+
       <h1>Galería Imagenes</h1>
       <div>
          <GaleriaImagenes />
@@ -55,6 +63,12 @@ function App() {
       <h1>Timer</h1>
       <div>
          <Timer />
+      </div>
+      <br />
+
+      <h1>Formulario de multiples páginas</h1>
+      <div>
+          <FormularioMultiple />
       </div>
       <br />
     </>
