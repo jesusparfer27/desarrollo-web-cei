@@ -6,13 +6,14 @@ import ListaDeTareasBasica from './components/listadetareasbasica/ListaDeTareasB
 import { NewFormulario } from './components/NewFormulario'
 // import FormularioRegistro from './components/FormularioRegistro'
 import GaleriaImagenes from './components/galleryimages/GaleriaImagenes'
-import Timer from './components/Timer'
+// import Timer from './components/timer/Timer'
 import FormularioExercise from './formularioexercise/FormularioExercise'
 import FormularioMultiple from './components/FormularioMultiple'
+import TestEffect from './components/TestEffect'
 
 
 function App() {
- 
+
 
   return (
     <>
@@ -44,31 +45,37 @@ function App() {
 
       <h1>New Formulario</h1>
       <div>
-      < NewFormulario />
+        < NewFormulario />
       </div>
       <br />
 
       <h1>Formulario Ejercicios</h1>
       <div>
-         <FormularioExercise/>
+        <FormularioExercise />
       </div>
       <br />
 
       <h1>Galería Imagenes</h1>
       <div>
-         <GaleriaImagenes />
+        <GaleriaImagenes />
       </div>
       <br />
 
-      <h1>Timer</h1>
+      {/* <h1>Timer</h1>
       <div>
-         <Timer />
+        <Timer />
       </div>
-      <br />
+      <br /> */}
 
       <h1>Formulario de multiples páginas</h1>
       <div>
-          <FormularioMultiple />
+        <FormularioMultiple />
+      </div>
+      <br />
+
+      <h1>Test Effect</h1>
+      <div>
+        <TestEffect />
       </div>
       <br />
     </>

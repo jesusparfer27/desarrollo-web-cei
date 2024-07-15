@@ -5,14 +5,6 @@ const GaleriaImagenes = ({ items, img, name }) => {
 
     const [actualImage, setActualImage] = useState(0)
 
-    const nextImage = () => {
-        if (actualImage === imageData.length - 1) {
-            setActualImage(0)
-        } else {
-            setActualImage(actualImage + 1)
-        }
-    }
-
     const previousImage = () => {
         if (actualImage === 0) {
             setActualImage(imageData.length -1)
@@ -21,8 +13,13 @@ const GaleriaImagenes = ({ items, img, name }) => {
         }
     }
 
-
-
+    const nextImage = () => {
+        if (actualImage === imageData.length - 1) {
+            setActualImage(0)
+        } else {
+            setActualImage(actualImage + 1)
+        }
+    }
 
     return (
         <div className="divStyle">

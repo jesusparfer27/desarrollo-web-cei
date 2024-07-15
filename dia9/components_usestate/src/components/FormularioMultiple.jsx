@@ -41,9 +41,20 @@ const FormularioMultiple = () => {
                 {renderizarPasos()}
 
                 {/* los botones */}
-                <button type="button" onClick={pasoAnterior}>Anterior</button>
-                <button onClick={pasoSiguiente}>Siguiente</button>
-                <button type="submit">Enviar</button>
+                {paso > 1 && (
+                    <button type="button" onClick={pasoAnterior}>Anterior</button>
+                )}
+                
+                
+                {paso > 2 && (
+                    <button onClick={pasoSiguiente}>Siguiente</button>
+                )}
+
+                {paso > 3 && (
+                    <button type="submit">Enviar</button>
+                )}
+                
+                
             </form>
         </>
     );
