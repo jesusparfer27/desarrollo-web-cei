@@ -6,10 +6,11 @@ import ListaDeTareasBasica from './components/listadetareasbasica/ListaDeTareasB
 import { NewFormulario } from './components/NewFormulario'
 // import FormularioRegistro from './components/FormularioRegistro'
 import GaleriaImagenes from './components/galleryimages/GaleriaImagenes'
-// import Timer from './components/timer/Timer'
+import Timer from './components/timer/Timer'
 import FormularioExercise from './formularioexercise/FormularioExercise'
 import FormularioMultiple from './components/FormularioMultiple'
-import TestEffect from './components/TestEffect'
+import Calculator from './components/Calculator'
+// import TestEffect from './components/TestEffect'
 
 
 function App() {
@@ -61,11 +62,11 @@ function App() {
       </div>
       <br />
 
-      {/* <h1>Timer</h1>
+      <h1>Timer</h1>
       <div>
         <Timer />
       </div>
-      <br /> */}
+      <br />
 
       <h1>Formulario de multiples páginas</h1>
       <div>
@@ -73,9 +74,15 @@ function App() {
       </div>
       <br />
 
-      <h1>Test Effect</h1>
+      {/* <h1>Test Effect</h1>
       <div>
         <TestEffect />
+      </div>
+      <br /> */}
+
+      <h1>Calculadora</h1>
+      <div>
+        <Calculator />
       </div>
       <br />
     </>

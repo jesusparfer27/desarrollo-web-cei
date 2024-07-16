@@ -1,31 +1,48 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const Timer = () => {
 
-    const [seconds, setSeconds] = useState(0)
-    const [minutes, setMinutes] = useState(0)
+    const [time, setTime] = useState({seconds: 0, minutes: 0})
+    const [timer, setTimer] = useState(null)
 
-var timer;
-    useEffect(() => {
+    const startTimer = () => {
+        const newTimer = setInterval(() => {
+            setTime(prevTime => {
+                let {seconds, minutes} = prevTime
 
-            setSeconds(seconds + 1)
-         
-            if (seconds > 59) {
-                setMinutes( + 1)
-                setSeconds(0)
-            }
+                seconds +=1;
+                if(seconds > 59) {
+                    minutes += 1;
+                    seconds = 0;
+                }
 
-    }, [1000])
+                return {seconds, minutes}
+            })
+        },1000);
+        setTimer(newTimer)
+    }
 
+    const restart = () => {
+        clearInterval(timer);
+        setTime ({seconds: 0, minutes:0});
+    }
 
+    const stop = () => {
+        clearInterval(timer)
+    }
+
+    const start = () => {
+        startTimer()
+    }
 
     return (
         <>
             <div className="divStyle">
-                {minutes} : {seconds}
-                <button onClick={(e)}>Start</button>
-                <button>Stop</button>
-                <button>Reset</button>
+                <h1>{time.minutes < 10 ? "0" + time.minutes : time.minutes} : {time.seconds < 10 ? "0" + time.seconds : time.seconds}</h1>
+                <button onClick={restart}>Restart</button>
+                <button onClick={stop}>Stop</button>
+                <button onClick={start}>Start</button>
+                {/* <button onClick={start}>Start</button> */}
             </div>
         </>
     )
