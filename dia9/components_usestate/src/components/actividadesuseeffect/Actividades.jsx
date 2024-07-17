@@ -12,7 +12,7 @@ export const Ejercicio1 = () => {
 
     useEffect(() => {
 
-        const button= document.getElementById("miBoton")
+        const button = document.getElementById("miBoton")
         button.addEventListener("click", handleClick);
 
     }, [])
@@ -20,7 +20,7 @@ export const Ejercicio1 = () => {
     return (
         <div>
             {
-            <button id="miBoton" onClick={handleClick}>Recibe tu mensaje</button>
+                <button id="miBoton" onClick={handleClick}>Recibe tu mensaje</button>
             }
         </div>
 
@@ -39,9 +39,9 @@ export const Ejercicio2 = () => {
     const [idIntervalo, setIdIntervalo] = useState(null)
 
 
-    useEffect (() => {
+    useEffect(() => {
 
-        document.title=`Timmer: ${time}`
+        document.title = `Timmer: ${time}`
 
         return () => {
             console.log("borrar mis intervalos", idIntervalo)
@@ -52,8 +52,8 @@ export const Ejercicio2 = () => {
     const startTimer = () => {
         clearInterval(idIntervalo)
         console.log("Iniciar Timer");
-        const idInt = setInterval (() => {
-            setTime ( time => time +1)
+        const idInt = setInterval(() => {
+            setTime(time => time + 1)
         }, 1000)
         console.log("CARGUE EL TIMER", idInt)
 
@@ -89,9 +89,43 @@ export const Ejercicio2 = () => {
 
 
 export const Ejercicio3 = () => {
+
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        llamandoApi()
+    }, [])
+
+    const llamandoApi = async () => {
+        try {
+            const response = await fetch('https://randomuser.me/api/?results')
+            const responseData = await response.json()
+            setData(responseData.results)
+        } catch (error) {
+            console.error('Hay un error en el fetching de datos')
+        }
+    }
+
     return (
         <div>
+            <h2>Data information</h2>
+            <div>
+                {
+                    data.map(user => {
+                        console.log(user)
 
+                        return (
+                            <div key={user.id.value}>
+                        <ul>
+                            <li>
+                                <p>{user.name.first} {user.name.last}</p>
+                                <p></p>
+                            </li>
+                        </ul>
+                        </div>)
+                    })
+                }
+            </div>
         </div>
     )
 }
