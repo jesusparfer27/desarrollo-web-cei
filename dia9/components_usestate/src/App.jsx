@@ -12,7 +12,7 @@ import FormularioMultiple from './components/FormularioMultiple'
 // import Calculator from './components/Calculator'
 // import TestEffect from './components/TestEffect'
 import { Ejercicio1, Ejercicio2, Ejercicio3 } from './components/actividadesuseeffect/Actividades'
-import { FetchDataComp } from '../fetchingdata/FetchDataComp'
+// import { FetchDataComp } from '../fetchingdata/FetchDataComp'
 
 
 function App() {
@@ -88,11 +88,11 @@ function App() {
       </div>
       <br /> */}
 
-      <h1>Formulario de multiples páginas</h1>
+      {/* <h1>Formulario de multiples páginas</h1>
       <div>
         <FetchDataComp />
       </div>
-      <br />
+      <br /> */}
 
       <h1>Actividades useEffect</h1>
       <div>

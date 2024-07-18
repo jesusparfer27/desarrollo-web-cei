@@ -22,8 +22,14 @@ export const FetchDataComp = () => {
             //     const datos = respuesta.json();
             //     return datos
             //  } )
-            .then(respuesta => respuesta.json())
-            .then(json => setData(json.results))
+            .then(stringJson => stringJson.json())
+            .then(objetoJs => setData(objetoJs))
+            .then (returnAnterior => {
+                // console.log("Hola")
+                // console.log("chau")
+                return returnAnterior;
+            })
+            .then (returnAnterior2 => returnAnterior2)
             .catch(error => {
                 console.log("Tuvimos un error", error)
             });
@@ -42,9 +48,9 @@ export const FetchDataComp = () => {
             const objJs = await respuesta.json()
             console.log(objJs)
             // guardo la info en mi state
-            setData(objJs.results)
+            setData(objJs)
         } catch (e) {
-            console.log("tuvimos un error")
+            console.log("tuvimos un error", e)
         }
     }
 
@@ -90,11 +96,13 @@ export const FetchDataComp = () => {
                                 <h2 className="h2Style">{name.first} {name.last}</h2>
                                 </div>
                             </div>
-                            {/* <p>{}, {}</p> */}
                         </div>
                     )
                 })
             }
+            <form action="http..." method='GET/POST'>
+                <input type="text" />
+            </form>
         </>
     );
 }
