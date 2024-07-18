@@ -12,7 +12,7 @@ import FormularioMultiple from './components/FormularioMultiple'
 // import Calculator from './components/Calculator'
 // import TestEffect from './components/TestEffect'
 import { Ejercicio1, Ejercicio2, Ejercicio3 } from './components/actividadesuseeffect/Actividades'
-import { FetchDataComp } from './components/FetchDataComp'
+import { FetchDataComp } from '../fetchingdata/FetchDataComp'
 
 
 function App() {
