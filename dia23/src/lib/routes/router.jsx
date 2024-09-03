@@ -1,13 +1,28 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from "react-router-dom";
 
 // Mis Paginas
-import ListaPost from '../../pages/ListaPost';
-import errorPage from '../../pages/error-page';
-import Layout from '../../Layout';
+import Layout from "../../Layout";
+import ErrorPage from '../../pages/error-page';
 
-children = [
-{
-    index: true,
-    element: <Home/>
-}
-]
+const router = createBrowserRouter([{
+    path: '/',
+    element: <Layout />,
+    errorElement: <ErrorPage/>,
+    children: [
+        {
+            index: true,
+            path: '/',
+            element: <Layout />
+        },
+        {
+            path: '/',
+            element: <></>
+        },
+        {
+            path: '*',
+            element: <></>
+        },
+    ]
+}])
+
+export default router

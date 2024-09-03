@@ -1,0 +1,22 @@
+.postContainer {
+    margin: 3.5rem;
+    cursor: pointer;
+}
+
+.postCard {
+    border: 1px solid white;
+}
+
+.tittlePost {
+    margin-left: 1rem;
+}
+
+.postBody {
+    font-weight: 400;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+strong  {
+    width: 100%;
+}

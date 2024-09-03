@@ -1,8 +1,15 @@
 import { Outlet, Link, NavLink } from 'react-router-dom';
+import { createContext } from 'react';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import ListaPosts from './pages/ListaPost'
 
 const Layout = () => {
     return ( <>
-    <header>
+    <Header/>
+    <ListaPosts/>
+    <Footer/>
+    {/* <header>
         <nav>
             <ul>
                 <li></li>
@@ -11,7 +18,7 @@ const Layout = () => {
                 <li></li>
             </ul>
         </nav>
-    </header>
+    </header> */}
     </> );
 }
  
