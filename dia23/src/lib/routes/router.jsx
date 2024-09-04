@@ -3,6 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 // Mis Paginas
 import Layout from "../../Layout";
 import ErrorPage from '../../pages/error-page';
+import ListaPost from "../../pages/ListaPost";
+import PostPage from "../../pages/PostPage";
+import Home from "../../pages/Home"
 
 const router = createBrowserRouter([{
     path: '/',
@@ -12,16 +15,20 @@ const router = createBrowserRouter([{
         {
             index: true,
             path: '/',
-            element: <Layout />
+            element: <Home />
         },
         {
-            path: '/',
-            element: <></>
+            path: '/publicaciones',
+            element: <ListaPost/>
+        },
+        {
+            path: '/comments',
+            element: <PostPage/>
         },
         {
             path: '*',
-            element: <></>
-        },
+            element: <ErrorPage/>
+        }
     ]
 }])
 
