@@ -11,7 +11,7 @@ const ListaPost = () => {
 
     const getData = async () => {
         try {
-            const respuesta = await fetch('https://jsonplaceholder.typicode.com/posts');
+            const respuesta = await fetch('http://localhost:3000/publicaciones');
             const objJs = await respuesta.json();
             setPost(objJs);
         } catch (e) {
@@ -30,7 +30,7 @@ const ListaPost = () => {
     return (
         <div className="postContainer">
             {post.map(({ userId, id, title, body }) => (
-                <div className="postCard" key={id}>
+                <div className="postCard" key={userId}>
                     <h3 className="tittlePost">{id} {title}</h3>
                     {/* Al hacer clic, se alterna la visibilidad del contenido */}
                     <strong className="postBody" onClick={() => togglePostVisibility(id)} style={{cursor: 'pointer', color: 'red'}}>

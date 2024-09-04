@@ -1,86 +1,81 @@
-// Version de CommonJS
-// const express = require('express');
-// const cors = require('cors')
-
 import { getLastId } from './utils/utils.js'
 import express from 'express'
 import cors from 'cors'
-
-import {publicaciones, comments} from './data/mockData.js'
+import { publicaciones, comments } from './data/mockData.js'
 
 const app = express();
 const PORT = 3000;
 
-app.use(cors())
+app.use(cors());
+app.use(express.json());
 
-// procesa el JSON body para leerlo con req.body()
-app.use(express.json())
-
-// const lastCommentId = getLastId(comments);
-// console.log("Last comment id: ", lastCommentId);
-// const lastPostId = getLastId(publicaciones);
-// console.log("Last post id: ", lastPostId)
-
-//  RUTAS
+// RUTAS
 // ---------------
 
 // GET /
 app.get("/", (req, res) => {
-    res.setHeader("Content-Type", "text/html")
-
+    res.setHeader("Content-Type", "text/html");
     const landingHTML = `
     <h1>Bienvenidos a nuestra REST-API</h1>
-    `
+    `;
     res.send(landingHTML);
-})
+});
 
 // GET /publicaciones
 app.get("/publicaciones", (req, res) => {
-    res.json(publicaciones)
-})
+    res.json(publicaciones);
+});
 
 // POST /publicaciones
 app.post("/publicaciones", (req, res) => {
+    const { title, body } = req.body;
+
+    if (!title || !body) {
+        return res.status(400).json({ error: "Title and body are required" });
+    }
 
     const lastId = getLastId(publicaciones);
 
-    const newPost={
+    const newPost = {
         id: lastId + 1,
         userId: 1,
-        title: req.body.title,
-        body: req.body.content
-    }
+        title: title,
+        body: body
+    };
 
-    publicaciones.push(newPost)
+    publicaciones.push(newPost);
 
-    res.json(newPost)
-})
-
+    res.status(201).json(newPost);
+});
 
 // GET /comments
 app.get("/comments", (req, res) => {
-    res.json(comments)
-})
+    res.json(comments);
+});
 
 // POST /comments
 app.post("/comments", (req, res) => {
-    
-    const {postId, usuario, email, comentario} = req.body
+    const { postId, usuario, email, comentario } = req.body;
+
+    if (!postId || !usuario || !email || !comentario) {
+        return res.status(400).json({ error: "All fields are required" });
+    }
 
     const lastId = getLastId(comments);
 
-    const newComment={
+    const newComment = {
         id: lastId + 1,
-        postId: postId,
+        postId,
         name: usuario,
-        email: email,
+        email,
         body: comentario
-    }
-    comments.push(newComment)
+    };
 
-    res.json(newComment)
-})
+    comments.push(newComment);
+
+    res.status(201).json(newComment);
+});
 
 app.listen(PORT, () => {
-    console.log(`Servidor iniciado en http://localhost:${PORT}`)
+    console.log(`Servidor iniciado en http://localhost:${PORT}`);
 });
