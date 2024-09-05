@@ -5,6 +5,23 @@ import '../css/listaPost.css';
 const ListaPost = () => {
     const [post, setPost] = useState([]);
     const [visiblePosts, setVisiblePosts] = useState({}); // Estado para manejar visibilidad de cada post
+    const [userError, setUserError] = useState("")
+
+    /*
+    useEffect(() => {
+        fetch(`http://localhost:3000/API/v1/publicaciones`)
+        .then(response => response.json())
+        .then((results) => {
+            console.log(msg)
+            
+            if(results.status === "error"){
+                alert(`TUVIMOS UN ERROR: ${msg}`)
+                return;
+            } else 
+            }
+            setPosts(results.data)
+            )})
+    */ 
 
     useEffect(() => {
         getDataPost();
@@ -30,10 +47,15 @@ const ListaPost = () => {
     };
 
     return (
+        <>
+        <h1>Soy Lista de posts</h1>
+        {userError && (<div className="text-red-400">{userError}</div>)}
+        {post.length === 0 && <p>No hay posts disponibles</p>}
+
         <div className="postContainer">
             {post.map(({ id, title, body }) => ( // Cambiado de post a posts
                 <div className="postCard" key={id}>
-                    <NavLink to={`/publicaciones/${id}/comments`}> {/* Mueve NavLink para envolver el contenido correctamente */}
+                    <NavLink to={`/publicaciones/${id}`}> {/* Mueve NavLink para envolver el contenido correctamente */}
                         <h3 className="tittlePost">{id} {title}</h3>
                     </NavLink>
                     {/* Al hacer clic, se alterna la visibilidad del contenido */}
@@ -47,6 +69,7 @@ const ListaPost = () => {
                 </div>
             ))}
         </div>
+        </>
     );
 };
 

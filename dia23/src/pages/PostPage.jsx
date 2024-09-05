@@ -13,7 +13,7 @@ const PostPage = () => {
 
     const getDataComment = async () => {
         try {
-            const respuesta = await fetch(`http://localhost:3000/API/v1/publicaciones/${id}/comments`);
+            const respuesta = await fetch(`http://localhost:3000/API/v1/publicaciones/${id}`);
             const postWithComments = await respuesta.json();
             setPostWithComments(postWithComments);
         } catch (e) {
@@ -28,7 +28,7 @@ const PostPage = () => {
         <h2>{title}</h2>
         <p>{body}</p>
         {
-            comments.comments.map((comentario) => {
+            comments && comments.map((comentario) => {
                 return (
                     <div key={comentario.id}>
                         {comentario.body}
