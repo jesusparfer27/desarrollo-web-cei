@@ -6,7 +6,7 @@ export const publicaciones=[{
   },
   {
     "userId": 1,
-    "id": 2,
+    "id": 3,
     "title": "qui est esse",
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   }
@@ -26,5 +26,12 @@ export const comments=[
         "name": "quo vero reiciendis velit similique earum",
         "email": "Jayne_Kuhic@sydney.com",
         "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+      },
+      {
+        "postId": 3,
+        "id": 25,
+        "name": "quo vero reiciendis velit similique earum",
+        "email": "Jayne_Kuhic@sydney.com",
+        "body": "comentario de post 3"
       }
 ];

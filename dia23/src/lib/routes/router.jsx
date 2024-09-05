@@ -22,7 +22,7 @@ const router = createBrowserRouter([{
             element: <ListaPost/>
         },
         {
-            path: '/comments',
+            path: '/publicaciones/:id/comments',
             element: <PostPage/>
         },
         {

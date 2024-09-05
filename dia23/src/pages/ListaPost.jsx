@@ -4,7 +4,6 @@ import '../css/listaPost.css';
 
 const ListaPost = () => {
     const [post, setPost] = useState([]);
-    const [comments, setComments] = useState([])
     const [visiblePosts, setVisiblePosts] = useState({}); // Estado para manejar visibilidad de cada post
 
     useEffect(() => {
@@ -13,7 +12,7 @@ const ListaPost = () => {
 
     const getDataPost = async () => {
         try {
-            const respuesta = await fetch('http://localhost:3000/publicaciones');
+            const respuesta = await fetch(`http://localhost:3000/API/v1/publicaciones`);
             const objJs = await respuesta.json();
             setPost(objJs);
         } catch (e) {
@@ -31,21 +30,23 @@ const ListaPost = () => {
     };
 
     return (
-        
-            <div className="postContainer">
-                {post.map(({ id, title, body }) => (
-                    <NavLink to={`/comments/${id}`}>
-                    <div className="postCard" key={id}>
+        <div className="postContainer">
+            {post.map(({ id, title, body }) => ( // Cambiado de post a posts
+                <div className="postCard" key={id}>
+                    <NavLink to={`/publicaciones/${id}/comments`}> {/* Mueve NavLink para envolver el contenido correctamente */}
                         <h3 className="tittlePost">{id} {title}</h3>
-                        {/* Al hacer clic, se alterna la visibilidad del contenido */}
-                        <strong className="postBody" onClick={() => togglePostVisibility(id)} style={{ cursor: 'pointer', color: 'red' }}>
-                            {visiblePosts[id] ? body : "Mostrar más..."}
-                        </strong>
-                    </div>
                     </NavLink>
-                ))}
-            </div>
-        
+                    {/* Al hacer clic, se alterna la visibilidad del contenido */}
+                    <strong
+                        className="postBody"
+                        onClick={() => togglePostVisibility(id)}
+                        style={{ cursor: 'pointer', color: 'red' }}
+                    >
+                        {visiblePosts[id] ? body : "Mostrar más..."}
+                    </strong>
+                </div>
+            ))}
+        </div>
     );
 };
 
